@@ -1,24 +1,25 @@
 # BlurAI - AI-Powered Image Editor
 
-BlurAI is an intelligent image editor that uses AI to detect objects in images and provides selective editing capabilities. It allows users to apply various effects to specific objects or the entire image.
+BlurAI is an intelligent image editor that uses AI to detect and edit objects in images. Built with Python and Streamlit, it provides an intuitive interface for image manipulation with AI-powered object detection.
 
 ## Features
 
 - Drag and drop image upload
 - AI-powered object detection
-- Selective object editing
-- Global image editing tools
+- Object-specific editing tools:
+  - Blur
+  - Square
+  - Delete
+  - Crop
+  - Face blur (for people)
+  - Number plate blur (for vehicles)
+- Global editing tools:
+  - Blur all faces
+  - Blur all number plates
 - High-resolution download options
 - Real-time preview of edits
 
-## Tech Stack
-
-- Backend: Python (FastAPI)
-- Frontend: React with TypeScript
-- Object Detection: YOLOv8
-- Image Processing: OpenCV, Pillow
-
-## Setup Instructions
+## Setup
 
 1. Clone the repository:
 ```bash
@@ -26,33 +27,23 @@ git clone https://github.com/snntx/Blur-AI.git
 cd Blur-AI
 ```
 
-2. Set up the backend:
+2. Install dependencies:
 ```bash
-cd backend
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-3. Set up the frontend:
+3. Run the application:
 ```bash
-cd frontend
-npm install
+streamlit run app.py
 ```
 
-4. Run the development servers:
+## Technologies Used
 
-Backend:
-```bash
-cd backend
-uvicorn main:app --reload
-```
-
-Frontend:
-```bash
-cd frontend
-npm run dev
-```
+- Python
+- Streamlit
+- YOLOv8 (Object Detection)
+- OpenCV
+- Pillow
 
 ## License
 
